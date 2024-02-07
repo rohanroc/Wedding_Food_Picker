@@ -1,0 +1,97 @@
+body {
+    background: radial-gradient(circle at top, #003cf0, #90a3c1);
+    height: 100vh;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+.main-heading {
+    font-size: 65px;
+    text-align: center;
+    color: whitesmoke;
+}
+
+form {
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    background-color: white;
+    border-radius: 25px;
+    padding: 10px 0;
+    overflow: auto;
+}
+
+h1 {
+    margin-top: 2px;
+    font-weight: 700;
+}
+
+label {
+    font-size: 20px;
+}
+
+.food-ip {
+    margin-top: 10px;
+}
+
+.btn {
+    background: #00233b;
+    background-image: -webkit-linear-gradient(top, #00233b, #3b596b);
+    background-image: -moz-linear-gradient(top, #00233b, #3b596b);
+    background-image: -ms-linear-gradient(top, #00233b, #3b596b);
+    background-image: -o-linear-gradient(top, #00233b, #3b596b);
+    background-image: linear-gradient(to bottom, #00233b, #3b596b);
+    -webkit-border-radius: 14;
+    -moz-border-radius: 14;
+    border-radius: 14px;
+    font-family: Georgia;
+    color: white;
+    font-size: 20px;
+    padding: 10px 30px;
+    text-decoration: none;
+    margin-top: 20px;
+    display: inline-block;
+    /* Ensures the button doesn't take full width */
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #000000;
+    background-image: -webkit-linear-gradient(top, #000000, #000305);
+    background-image: -moz-linear-gradient(top, #000000, #000305);
+    background-image: -ms-linear-gradient(top, #000000, #000305);
+    background-image: -o-linear-gradient(top, #000000, #000305);
+    background-image: linear-gradient(to bottom, #000000, #000305);
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (min-width: 600px) {
+    form {
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    form {
+        width: 60%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    form {
+        width: 50%;
+    }
+}

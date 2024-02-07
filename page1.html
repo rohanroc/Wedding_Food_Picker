@@ -1,0 +1,112 @@
+<!-- page1.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* p {
+        display: none;
+    } */
+    #saveAsPdfBtn {
+        text-decoration: none;
+        font-size: x-large;
+        color: blue;
+    }
+</style>
+
+<body>
+    <h3>Drinks Menu</h3>
+    <p class="drinks-text" id="mocktail-text">Mock Tail Live</p>
+    <p class="drinks-text" id="tea-text">Tea Live</p>
+    <p class="drinks-text" id="coffee-text">Coffee Live</p>
+
+    <h3>Starter Menu</h3>
+    <p class="starter-text" id="crkl-text">Chicken Reshmi Kabab Live</p>
+    <p class="starter-text" id="ff-text">Fish Finger</p>
+    <p class="starter-text" id="cbc-text">Crispy Baby Corn</p>
+    <p class="starter-text" id="fb-text">Fish Ball</p>
+    <p class="starter-text" id="fuchka-text">Fuchka </p>
+    <p class="starter-text" id="pc-text">Papri Chaat</p>
+    <p class="starter-text" id="dv-text">Dahi Vada</p>
+
+    <h3>Main Course Menu</h3>
+    <p class="maincourse-text" id="mcu-text">Mashala Culcha</p>
+    <p class="maincourse-text" id="cma-text">Chana Mashala </p>
+    <p class="maincourse-text" id="bff-text">Bhetki Fish Fry</p>
+    <p class="maincourse-text" id="jr-text">Jira Rice</p>
+    <p class="maincourse-text" id="mb-text">Mutton Biryani</p>
+    <p class="maincourse-text" id="cb-text">Chicken Biryani </p>
+    <p class="maincourse-text" id="bp-text">Basanti Pulao</p>
+    <p class="maincourse-text" id="mk-text">Mutton Kosha</p>
+    <p class="maincourse-text" id="ck-text">Chicken Kosha</p>
+    <p class="maincourse-text" id="cm-text">Chigri Malaikari</p>
+    <p class="maincourse-text" id="kk-text">Katla Kalia</p>
+    <p class="maincourse-text" id="kp-text">Kadai Paneer</p>
+    <p class="maincourse-text" id="mko-text">Malai Kofta</p>
+
+    <h3>Dessert Menu</h3>
+    <p class="dessert-text" id="fc-text">Fruits Chatney</p>
+    <p class="dessert-text" id="mc-text">Mango Chatney</p>
+    <p class="dessert-text" id="p-text">Pan Live</p>
+    <p class="dessert-text" id="ic-text">Ice Cream</p>
+
+    <a id="saveAsPdfBtn" href="https://www.sejda.com/html-to-pdf">Save as PDF</a>
+    <script>
+        document.getElementById('saveAsPdfBtn').addEventListener('click', function (e) {
+            var pageUrl = encodeURIComponent(window.location.href);
+            var opts = ['save-link=' + pageUrl, 'pageOrientation=auto'];
+            window.open('https://www.sejda.com/html-to-pdf?' + opts.join('&'));
+            e.preventDefault();
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Drinks menu
+            displayText("mocktail-text", "mocktailChecked");
+            displayText("tea-text", "teaChecked");
+            displayText("coffee-text", "coffeeChecked");
+
+            // starter menu
+            displayText("crkl-text", "crklChecked");
+            displayText("ff-text", "ffChecked");
+            displayText("cbc-text", "cbcChecked");
+            displayText("fb-text", "fbChecked");
+            displayText("fuchka-text", "fuchkaChecked");
+            displayText("pc-text", "pcChecked");
+            displayText("dv-text", "dvChecked");
+
+            // Main course
+            displayText("mcu-text", "mcuChecked");
+            displayText("cma-text", "cmaChecked");
+            displayText("bff-text", "bffChecked");
+            displayText("jr-text", "jrChecked");
+            displayText("mb-text", "mbChecked");
+            displayText("cb-text", "cbChecked");
+            displayText("bp-text", "bpChecked");
+            displayText("mk-text", "mkCheckedMain");
+            displayText("ck-text", "ckChecked");
+            displayText("cm-text", "cmChecked");
+            displayText("kk-text", "kkChecked");
+            displayText("kp-text", "kpChecked");
+            displayText("mko-text", "mkoChecked");
+
+            // Dessert
+            displayText("fc-text", "fcChecked");
+            displayText("mc-text", "mcChecked");
+            displayText("p-text", "pChecked");
+            displayText("ic-text", "icChecked");
+            function displayText(textId, storageKey) {
+                var textElement = document.getElementById(textId);
+                var isChecked = localStorage.getItem(storageKey) === 'true';
+                textElement.style.display = isChecked ? "block" : "none";
+            }
+        });
+    </script>
+</body>
+
+</html>

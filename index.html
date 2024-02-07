@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 class="main-heading">Wedding Menu Picker</h1>
+    <form action="page1.html">
+        <!-- drinks  -->
+        <h1>Pick Drinks Items</h1>
+
+        <div class="drinks-container">
+            <div class="food-ip">
+                <label for="mocktail">Mock Tail Live</label>
+                <input type="checkbox" name="drinks" id="mocktail" class="drinks">
+            </div>
+            <div class="food-ip">
+                <label for="tea">Tea Live</label>
+                <input type="checkbox" name="drinks" id="tea" class="drinks">
+            </div>
+            <div class="food-ip">
+                <label for="coffee">Coffee Live</label>
+                <input type="checkbox" name="drinks" id="coffee" class="drinks">
+            </div>
+        </div>
+        <!-- starter  -->
+        <h1>Pick Starter Items</h1>
+
+        <div class="starter-container">
+            <div class="food-ip">
+                <label for="crkl">Chicken Reshmi Kabab Live</label>
+                <input type="checkbox" name="starter" id="crkl" class="starter">
+            </div>
+            <div class="food-ip">
+                <label for="ff">Fish Finger</label>
+                <input type="checkbox" name="starter" id="ff" class="starter">
+            </div>
+            <div class="food-ip">
+                <label for="cbc">Crispy Baby Corn</label>
+                <input type="checkbox" name="starter" id="cbc" class="starter">
+            </div>
+            <div class="food-ip">
+                <label for="fb">Fish Ball</label>
+                <input type="checkbox" name="starter" id="fb" class="starter">
+            </div>
+            <div class="food-ip">
+                <label for="fuchka">Fuchka</label>
+                <input type="checkbox" name="starter" id="fuchka" class="starter">
+            </div>
+            <div class="food-ip">
+                <label for="pc">Papri Chaat</label>
+                <input type="checkbox" name="starter" id="pc" class="starter">
+            </div>
+            <div class="food-ip">
+                <label for="dv">Dahi Vada</label>
+                <input type="checkbox" name="starter" id="dv" class="starter">
+            </div>
+        </div>
+
+        <h1>Pick Main Course</h1>
+
+        <div class="mainCourse-container">
+            <div class="food-ip">
+                <label for="mcu">Mashala Culcha</label>
+                <input type="checkbox" name="starter" id="mcu" class="starter">
+            </div>
+            <div class="food-ip">
+                <label for="cma">Chana Mashala</label>
+                <input type="checkbox" name="starter" id="cma" class="starter">
+            </div>
+            <div class="food-ip">
+                <label for="bff">Bhetki Fish Fry</label>
+                <input type="checkbox" name="starter" id="bff" class="starter">
+            </div>
+            <div class="food-ip">
+                <label for="jr">Jira Rice</label>
+                <input type="checkbox" name="starter" id="jr" class="starter">
+            </div>
+            <div class="food-ip">
+                <label for="mb">Mutton Biryani</label>
+                <input type="checkbox" name="starter" id="mb" class="starter">
+            </div>
+            <div class="food-ip">
+                <label for="cb">Chicken Biryani</label>
+                <input type="checkbox" name="starter" id="cb" class="starter">
+            </div>
+            <div class="food-ip">
+                <label for="bp">Basanti Pulao</label>
+                <input type="checkbox" name="starter" id="bp" class="starter">
+            </div>
+            <div class="food-ip">
+                <label for="mko">Mutton Kosha</label>
+                <input type="checkbox" name="starter" id="mko" class="starter">
+            </div>
+            <div class="food-ip">
+                <label for="ck">Chicken Kosha</label>
+                <input type="checkbox" name="starter" id="ck" class="starter">
+            </div>
+            <div class="food-ip">
+                <label for="cm">Chigri Malaikari</label>
+                <input type="checkbox" name="starter" id="cm" class="starter">
+            </div>
+            <div class="food-ip">
+                <label for="kk">Katla Kalia</label>
+                <input type="checkbox" name="starter" id="kk" class="starter">
+            </div>
+            <div class="food-ip">
+                <label for="kp">Kadai Paneer</label>
+                <input type="checkbox" name="starter" id="kp" class="starter">
+            </div>
+            <div class="food-ip">
+                <label for="mko">Malai Kofta</label>
+                <input type="checkbox" name="starter" id="mko" class="starter">
+            </div>
+        </div>
+
+        <h1>Pick Dessert</h1>
+
+        <div class="dessert-container">
+            <div class="food-ip">
+                <label for="fc">Fruits Chatney</label>
+                <input type="checkbox" name="starter" id="fc" class="starter">
+            </div>
+            <div class="food-ip">
+                <label for="mc">Mango Chatney</label>
+                <input type="checkbox" name="starter" id="mc" class="starter">
+            </div>
+            <div class="food-ip">
+                <label for="p">Papad</label>
+                <input type="checkbox" name="starter" id="p" class="starter">
+            </div>
+            <div class="food-ip">
+                <label for="ic">Ice Cream</label>
+                <input type="checkbox" name="starter" id="ic" class="starter">
+            </div>
+        </div>
+
+
+        <button type="menu" class="btn">Submit</button>
+    </form>
+    <footer>
+        <p>Code with ❤️ by <a href="https://www.linkedin.com/in/arijit-sah/"> Arijit</a></p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Drinks items
+            handleCheckbox("mocktail", "mocktailChecked");
+            handleCheckbox("tea", "teaChecked");
+            handleCheckbox("coffee", "coffeeChecked");
+
+            // Starter items
+            handleCheckbox("crkl", "crklChecked");
+            handleCheckbox("ff", "ffChecked");
+            handleCheckbox("cbc", "cbcChecked");
+            handleCheckbox("fb", "fbChecked");
+            handleCheckbox("fuchka", "fuchkaChecked");
+            handleCheckbox("pc", "pcChecked");
+            handleCheckbox("dv", "dvChecked");
+
+            // Main course
+            handleCheckbox("mcu", "mcuChecked");
+            handleCheckbox("cma", "cmalChecked");
+            handleCheckbox("bff", "bfflChecked");
+            handleCheckbox("jr", "jrChecked");
+            handleCheckbox("mb", "mbChecked");
+            handleCheckbox("cb", "cbChecked");
+            handleCheckbox("bp", "bpChecked");
+            handleCheckbox("mk", "mkChecked");
+            handleCheckbox("ck", "ckChecked");
+            handleCheckbox("cm", "cmChecked");
+            handleCheckbox("kk", "kkChecked");
+            handleCheckbox("kp", "kpChecked");
+            handleCheckbox("mko", "mkoChecked");
+
+            // Dessert
+            handleCheckbox("fc", "fcChecked");
+            handleCheckbox("mc", "mcChecked");
+            handleCheckbox("p", "pChecked");
+            handleCheckbox("ic", "icChecked");
+
+
+            function handleCheckbox(id, key) {
+                var checkbox = document.getElementById(id);
+
+                if (checkbox) {
+                    // Retrieve checkbox state from localStorage
+                    var isChecked = localStorage.getItem(key) === 'true';
+
+                    // Set initial checkbox state
+                    checkbox.checked = isChecked;
+
+                    // Add change event listener to update localStorage
+                    checkbox.addEventListener('change', function () {
+                        localStorage.setItem(key, checkbox.checked);
+                    });
+                } else {
+                    console.error("Checkbox element not found with id:", id);
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>
