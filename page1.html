@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Food list</title>
 </head>
 <style>
     /* p {
@@ -54,7 +54,7 @@
     <p class="dessert-text" id="p-text">Papad</p>
     <p class="dessert-text" id="ic-text">Ice Cream</p>
 
-    <a id="saveAsPdfBtn" href="https://www.sejda.com/html-to-pdf">Save as PDF</a>
+    <a id="saveAsPdfBtn" onclick="window.print()">Save as PDF</a>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -97,12 +97,6 @@
                 var isChecked = localStorage.getItem(storageKey) === 'true';
                 textElement.style.display = isChecked ? "block" : "none";
             }
-        });
-        document.getElementById('saveAsPdfBtn').addEventListener('click', function (e) {
-            var pageUrl = encodeURIComponent(window.location.href);
-            var opts = ['save-link=' + pageUrl, 'pageOrientation=auto'];
-            window.open('https://www.sejda.com/html-to-pdf?' + opts.join('&'));
-            e.preventDefault();
         });
     </script>
 </body>
